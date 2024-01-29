@@ -1,10 +1,20 @@
 Minimal [Decision Transformer](https://github.com/kzl/decision-transformer) Implementation written in Jax (Flax). [[Reference (minimal torch implementation)]](https://github.com/nikhilbarhate99/min-decision-transformer)
 
 ## Setup
+
 Set up the environments:
 ```bash
 pip install -r requirements.txt
 pip install -e .
+```
+
+### Docker
+
+```bash
+docker build -t dt .
+# docker save -o dt.tar dt:latest
+# docker load < dt.tar
+docker run -it --gpus all --shm-size 16G --entrypoint /bin/bash dt:latest
 ```
 
 ## Usage
